@@ -4,11 +4,15 @@
  * Description: use print hello world
  * Return: void
 */
-int main(void)
+int funcion(void)
 {
 	char letra;
-	for (letra = 97 ; letra <= 122 ; letra++)
+
+	for (letra = 97; letra <= 122; letra++)
+		putchar(letra);
+	for (letra = 65; letra <= 90; letra++)
 		putchar(letra);
 	putchar('\n');
-	return (0);
+return (0);
 }
+
