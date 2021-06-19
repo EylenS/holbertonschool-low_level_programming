@@ -9,9 +9,8 @@ int main(void)
 char letra;
 
 	for (letra = 97; letra <= 122; letra++)
-		if ((letra != 101) && (letra != 113))
-		   putchar(letra);
-    putchar('\n');
+		if (letra != 101 && letra != 113)
+			putchar(letra);
+putchar('\n');
 return (0);
 }
-
