@@ -1,7 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-/* more headers goes there */
+
+/**
+ * main - breve descripcion
+ * Description: use print hello world
+ * Return: void
+*/
 
 /* betty style doc for function main goes there */
 int main(void)
