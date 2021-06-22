@@ -3,7 +3,7 @@
 
 /**
  * _islower - writes the character is in lowercase to stdout
- * : The character to print
+ *@c : The character to evaluate
  *
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
