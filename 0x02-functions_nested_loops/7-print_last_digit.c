@@ -23,5 +23,5 @@ int print_last_digit(int i)
 		b = 48 + a;
 		_putchar(b);
 	}
-	return (b-48);
+	return (b - 48);
 }
