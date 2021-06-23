@@ -19,9 +19,9 @@ void times_table(void)
 			u = n % 10;
 			d = (n - u) / 10;
 			if (n > 9)
-			{
 				_putchar(d + 48);
-			}
+			else
+				_putchar(' ');
 			_putchar(u + 48);
 			_putchar(',');
 			_putchar(' ');
@@ -30,9 +30,9 @@ void times_table(void)
 		c = n % 10;
 		l = (n - c) / 10;
 		if (n > 9)
-		{
 			_putchar(l + 48);
-		}
+		else
+			_putchar(' ');
 		_putchar(c + 48);
 		_putchar('\n');
 	}
