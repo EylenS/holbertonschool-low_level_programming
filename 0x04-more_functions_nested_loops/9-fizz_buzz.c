@@ -1,5 +1,10 @@
 #include <stdio.h>
 
+/**
+ * main - prints numbers from 1 to 100- Fizz Bazz
+ * Description: use print hello world
+ * Return: void
+*/
 int main(void)
 {
 	int i = 1;
