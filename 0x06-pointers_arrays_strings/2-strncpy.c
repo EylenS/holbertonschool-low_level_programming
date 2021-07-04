@@ -27,11 +27,20 @@ char *_strncpy(char *dest, char *src, int n)
 		n = size_dest;
 	if (n < 0)
 		n = 0;
-	for (c = 0; c < n; c++)
+	if (n < size_src)
 	{
-		if (c > size_src)
-			dest[c] = '\0';
-		dest[c] = src[c];
+		for (c = 0; c < n; c++)
+			dest[c] = src[c];
+	}
+	else
+	{
+		for (c = 0; c < n; c++)
+		{
+			if (c < size_src)
+				dest[c] = src[c];
+			else
+				dest[c] = '\0';
+		}
 	}
 	return (dest);
 }
