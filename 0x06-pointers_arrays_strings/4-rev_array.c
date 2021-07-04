@@ -8,10 +8,10 @@
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
-void reverse_array (int *a, int n)
+void reverse_array(int *a, int n)
 {
 	int i, mid, aux;
-	
+
 	mid = n / 2;
 	for (i = 0; i < mid; i++)
 	{
