@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 
 /**
  * _memset- Copies de chars c 2 the 1st n chars of teh string pointed
