@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * _strpbrk- Finds the 1st char in the string s that matches any char specified in accept
+ * _strpbrk- Finds the 1st char in the string s that matches in accept
  * @s:This is the string to be scanned
  * @accept:The string containing the list of chars to match
  *
