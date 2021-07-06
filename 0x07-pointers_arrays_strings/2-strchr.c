@@ -14,7 +14,7 @@ char *_strchr(char *s, char c)
 
 	while (s[i] != '\0')
 	{
-		if (c >= 32)
+		if (c >= 32 && c <= 126)
 		{
 			if (s[i] == c)
 				return (s + i);
