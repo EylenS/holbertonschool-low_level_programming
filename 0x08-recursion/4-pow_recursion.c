@@ -5,7 +5,7 @@
  * @x: Base value
  * @y: number of times x is multiplied by itself
  *
- * Return: return the factorial of a given number
+ * Return: return the value of x raised to the power of y.
  * On error: -1
  */
 int _pow_recursion(int x, int y)
