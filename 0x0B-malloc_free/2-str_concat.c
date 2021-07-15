@@ -11,17 +11,21 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	unsigned int i = 0;
+	unsigned int i;
 	unsigned int size_s1, size_s2, size;
 	char *p;
 
-	if (s1 == NULL || s2 == NULL)
+	if (s1 == NULL)
 		return (00);
+	if (s2 == NULL)
+		return (00);
+	i = 0;
 	while (s1[i] != '\0')
 	{
 		i++;
 	}
 	size_s1 = i;
+	i = 0;
 	while (s2[i] != '\0')
 	{
 		i++;
