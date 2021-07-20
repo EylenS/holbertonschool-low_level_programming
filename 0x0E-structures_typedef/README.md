@@ -1,0 +1,2 @@
+0x0E. C - Structures, typedef
+In the creation of solutions to some problems the need arises to group data of different types or to handle data that would be very difficult to describe in primitive data types, this is the situation in which we must take advantage of the features that make the C language special, namely the use of structures, unions and pointers.
