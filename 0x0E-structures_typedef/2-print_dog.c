@@ -11,14 +11,26 @@ void init_dog(struct dog *d, char *name, float age, char *owner);
  */
 void print_dog(struct dog *d)
 {
-	void init_dog(struct dog *d, char *name, float age, char *owner);
-	printf("Name: %s\n", (*d).name);
-	printf("Age: %.6f\n", (*d).age);
-	printf("Owner: %s\n", (*d).owner);
+	if (d != NULL)
+	{
+		void init_dog(struct dog *d, char *name, float age, char *owner);
+		printf("Name: %s\n", (*d).name);
+		printf("Age: %.6f\n", (*d).age);
+		printf("Owner: %s\n", (*d).owner);
+	}
 }
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	(*d).name = name;
-	(*d).age = age;
-	(*d).owner = owner;
+	if (name == NULL)
+		(*d).name = "(nil)";
+	else
+		(*d).name = name;
+	if (age <= 0)
+		(*d).age = 0;
+	else
+		(*d).age = age;
+	if (owner == NULL)
+		(*d).owner = "(nil)";
+	else
+		(*d).owner = owner;
 }
