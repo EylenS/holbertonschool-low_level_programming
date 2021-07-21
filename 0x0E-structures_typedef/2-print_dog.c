@@ -18,8 +18,6 @@ void print_dog(struct dog *d)
 		printf("Age: %.6f\n", (*d).age);
 		printf("Owner: %s\n", (*d).owner);
 	}
-	else
-		printf(" ");
 }
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
