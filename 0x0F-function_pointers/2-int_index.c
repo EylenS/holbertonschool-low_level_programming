@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdlib.h>
 #include "function_pointers.h"
 
 /**
@@ -14,12 +14,15 @@ int int_index(int *array, int size, int (*cmp)(int))
 {
 	int i, r;
 
+	if (array == NULL)
+		exit(-1);
+	if (cmp == NULL)
+		exit(-1);
 	if (size >= 1)
 	{
 		for (i = 0; i < size; i++)
 		{
 			r = cmp(array[i]);
-			/*	printf("value %d, position: %d, return (%d)\n", array[i], i, r); */
 			if (r != 0)
 				return (i);
 		}
