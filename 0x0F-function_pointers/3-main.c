@@ -19,12 +19,8 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-	if (argv[1] == NULL || argv[2] == NULL || argv[3] == NULL)
-		return (0);
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
-	if (num1 == 0 || num2 == 0)
-		return (0);
 	operator = argv[2];
 	calc = (*get_op_func(operator))(num1, num2);
 	printf("%d\n", calc);
