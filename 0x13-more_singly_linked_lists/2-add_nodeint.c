@@ -11,6 +11,10 @@ listint_t *add_nodeint(listint_t **head, const int n)
 {
 listint_t *new; /* new element*/
 
+if (head == NULL)
+{
+return (00);
+}
 new = malloc(sizeof(listint_t)); /*allocate memory to new var*/
 if (new == NULL)
 {
