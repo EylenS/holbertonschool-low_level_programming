@@ -8,7 +8,7 @@
  */
 size_t print_listint(const listint_t *h)
 {
-int the_counter = 1;
+size_t the_counter = 1;
 
 printf("%d\n", h->n);
 if (h->next != NULL)
