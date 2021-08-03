@@ -5,7 +5,7 @@
  * @head: A pointer will change the value of *header. Pointer 2 pointer.
  * @n: the new element to be add in the beggining.
  *
- * Return: the number of nodes. On Error return negative number.
+ * Return: the address of the new element, or NULL if it failed
  */
 listint_t *add_nodeint(listint_t **head, const int n)
 {
