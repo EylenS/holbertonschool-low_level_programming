@@ -8,5 +8,9 @@
  */
 size_t listint_len(const listint_t *h)
 {
-
+    int the_counter = 1;
+    
+    if (h->next != NULL)
+        the_counter = listint_len(h->next) + 1;
+    return (the_counter);
 }
