@@ -23,10 +23,6 @@ if (p->next == NULL)
 return (NULL);
 p = p->next; /*actualizar el auntador al sig nodo */
 }
-if (p->next == NULL)
-return (NULL);
-else
-{
 new = malloc(sizeof(listint_t)); /* una vez en idx, se reserva memoria*/
 if (new == NULL)
 return (NULL);
@@ -34,6 +30,5 @@ new->n = n;
 new->next = p->next;
 p->next = new;
 return (new);
-}
 }
 }
