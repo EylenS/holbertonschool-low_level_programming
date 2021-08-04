@@ -10,11 +10,11 @@ int pop_listint(listint_t **head)
 {
 listint_t *p;
 int data_n;
-p = *head;
 if (*head == NULL)
 return (0);
 else
 {
+p = *head;
 *head = p->next; /* head apuntará al siguiente nodo*/
 data_n = p->n;
 free(p); /* head está apdo al sig nodo, y p borraría el head node */
