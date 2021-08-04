@@ -18,6 +18,8 @@ else
 {
 for (i = 0; i < index; i++)
 p = p->next;
+if (p->next == NULL)
+{return (NULL);}
 return (p);
 }
 }
