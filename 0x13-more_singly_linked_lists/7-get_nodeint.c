@@ -17,9 +17,12 @@ return (NULL);
 else
 {
 for (i = 0; i < index; i++)
-p = p->next;
+{
 if (p->next == NULL)
-{return (NULL);}
+return (NULL);
+else
+p = p->next;
+}
 return (p);
 }
 }
