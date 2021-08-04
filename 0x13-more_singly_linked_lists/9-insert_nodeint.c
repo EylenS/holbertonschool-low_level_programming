@@ -17,19 +17,23 @@ if (head == NULL) /* si es NULL, significa que list está vacía */
 return (NULL);
 else /* caso: list no está vacío */
 {
-
-for (i = 0; i < idx - 1; i++) /* se resta 1 a idx, porque p aumenta 1*/
+for (i = 0; i < (idx - 1); i++) /* -1 porq p->next aumenta 1 posición*/
 {
 if (p->next == NULL)
 return (NULL);
 p = p->next; /*actualizar el auntador al sig nodo */
-} /*terminado el recorrido, se reserva la memoria */
-new = malloc(sizeof(listint_t));
+}
+if (p->next == NULL)
+return (NULL);
+else
+{
+new = malloc(sizeof(listint_t)); /* una vez en idx, se reserva memoria*/
 if (new == NULL)
 return (NULL);
 new->n = n;
 new->next = p->next;
 p->next = new;
 return (new);
+}
 }
 }
