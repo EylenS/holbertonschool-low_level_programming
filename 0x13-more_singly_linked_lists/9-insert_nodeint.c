@@ -13,7 +13,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 listint_t *p, *new;
 unsigned int i;
 p = *head;
-if (head == NULL) /* si es NULL, significa que list está vacía */
+if (*head == NULL) /* si es NULL, significa que list está vacía */
 return (NULL);
 else /* caso: list no está vacío */
 {
