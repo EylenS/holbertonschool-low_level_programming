@@ -14,8 +14,8 @@ int pop_listint(listint_t **head)
 	if (*head != NULL)
 	{
 		p = *head;
-		*head = p->next; /* head apuntará al siguiente nodo*/
 		data_n = p->n;
+		*head = p->next; /* head apuntará al siguiente nodo*/
 		free(p); /* head está apdo al sig nodo, y p borraría el head node */
 		return (data_n);
 	}
