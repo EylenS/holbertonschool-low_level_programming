@@ -24,18 +24,25 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		new->next = *head; /*new.next apunta al mismo nodo de *head */
 		*head = new; /* ahora *head queda apuntando a new, el nodo cabeza*/
 		new->n = n;
+		return (new);
 	} /* lo que sigue-> caso: idx > 0 */
-	for (i = 0; i < (idx - 1); i++) /* -1 porq p->next aumenta 1 posición*/
+	else
 	{
-		if (p->next == NULL)
-			return (NULL);
-		p = p->next; /* para avanzar entre los nodos*/
+		for (i = 0; i < idx - 1; i++) /* -1 porq p->next aumenta 1 posición*/
+		{
+			if (p->next == NULL)
+				return (NULL);
+			p = p->next; /* para avanzar entre los nodos*/
+		}
+		if (i == (idx - 1)
+		{
+			new = malloc(sizeof(listint_t)); /* una vez en idx -1, se reserva memoria*/
+			if (new == NULL)
+				return (NULL);
+			new->n = n;
+			new->next = p->next;
+			p->next = new;
+		}
 	}
-	new = malloc(sizeof(listint_t)); /* una vez en idx -1, se reserva memoria*/
-	if (new == NULL)
-		return (NULL);
-	new->n = n;
-	new->next = p->next;
-	p->next = new;
 	return (new);
 }
