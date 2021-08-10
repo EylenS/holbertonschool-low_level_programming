@@ -9,22 +9,28 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	size_t c, r;
+	size_t c, num_bytes;
 	int fd;
 	char buffer[1024];
 
 	if (filename == NULL)
 		return (0);
 	fd = open(filename, O_RDONLY);
-	if (fd == -1)
-		return (0);
-	r = read(fd, buffer, sizeof(buffer));
-	if (r <= 0)
-		return (0);
-	if (letters > r)
-		letters = r;
-	c = write(STDOUT_FILENO, buffer, letters);
-	if ((int)c < 0)
-		return (0);
-	return (letters);
+	while (fd != -1) /* si se puede abrir */
+	{
+		num_bytes = read(fd, buffer, sizeof(buffer));
+		if ((int)num_bytes == -1) /*no se puede leer */
+			return (0);
+		else
+			if (num_bytes != 0)
+			{
+				if (letters > num_bytes)
+					letters = num_bytes;
+				c = write(STDOUT_FILENO, buffer, letters);
+				if ((int)c != -1)
+					return (letters);
+				return (0);
+			}
+	}
+	return (0);
 }
