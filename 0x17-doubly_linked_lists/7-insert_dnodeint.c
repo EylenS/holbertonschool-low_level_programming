@@ -9,36 +9,40 @@
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *aux, *new;
-	unsigned int counter;
-
-	aux = *h;
+	dlistint_t *aux, *new, *next;
+	unsigned int counter = 0;
 
 	if (h == NULL)
 		return (NULL);
+
+	if (idx != 0)
+	{
+		aux = *h;
+		while (counter < (idx - 1))
+		{
+			aux = aux->next;
+			counter++;
+			if (aux == NULL)
+				return (NULL);
+		}
+	}
 
 	new = malloc(sizeof(dlistint_t));
 	if (new == NULL)
 		return (NULL);
 
-	/* touring nodes */
-	while (counter < idx - 1)
-	{
-		counter++;
-		aux = aux->next;
-		if (aux == NULL)
-			return (NULL);
-	}
-
 	new->n = n;
 
 	if (idx == 0)
 		return (add_dnodeint(h, n));
-	else if (aux->next == NULL)
-		return (add_dnodeint_end(h, n));
-	new->next = aux->next;
-	aux->next = new;
-	new->prev = aux;
+
+	else
+	{
+		new->prev = aux;
+		next = aux->next;
+		aux->next = new;
+	}
+	new->next = next;
 	if (new->next != NULL)
 		new->next->prev = new;
 	return (new);
