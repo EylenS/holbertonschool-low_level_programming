@@ -13,14 +13,14 @@ hash_table_t *hash_table_create(unsigned long int size)
 	unsigned long int idx = 0;
 	hash_table_t *ht;
 
-	/* It is an array of pointers. Each slot of the table */
-	/* stores the head of a chained list  */
+	/* It is an array of pointers. Each slot of the table ... */
+	/* ... stores the head of a linked list  */
 	head = malloc(sizeof(hash_node_t *) * size);
 	if (head == NULL)
 		return (NULL);
 
-	/* a slot in the table where no element has been */
-	/* inserted, contains a pointer to NULL */
+	/* a slot in the table where no element has been ... */
+	/* ... inserted, contains a pointer to NULL */
 	for (idx = 0; idx < size; idx++)
 	{
 		head[idx] = NULL;
