@@ -1,0 +1,5 @@
+# This Makefile builds an executable called school by variables
+CC = gcc
+SRC = main.c school.c
+all: $(SRC)
+	$(CC) $(SRC) -o school
