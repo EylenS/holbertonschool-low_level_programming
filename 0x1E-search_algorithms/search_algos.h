@@ -2,7 +2,7 @@
 #define SEARCH_ALGOS_H
 
 /* --> LIBRARIES <-- */
-#include<stdlib.h>
+#include <stdlib.h>
 #include <stdio.h>
 
 /* ---> PROTOTYPES <--- */
